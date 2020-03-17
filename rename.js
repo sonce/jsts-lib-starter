@@ -2,12 +2,14 @@ var path = require('path');
 
 var cdkit = require('cdkit');
 
-
-var fromName1 = 'ASheng';
-var toName1 = 'sonce';
-
-var fromName2 = 'quickapp-h5';
-var toName2 = 'JSTS-Lib-Starter';
+var replaces=[{
+    from:"JSTS-Lib-Starter",
+    to:"BTGrid"
+},
+{
+    from:"jsts-lib-starter",
+    to:"btgrid"
+}]
 
 
 function getFullPath (filename) {
@@ -18,6 +20,7 @@ var map = [
     getFullPath('package.json'),
     getFullPath('README.md'),
     getFullPath('README.zh-CN.md'),
+    getFullPath('jslib.json'),
     getFullPath('config/rollup.js'),
     getFullPath('test/browser/index.html'),
     getFullPath('demo/demo-global.html'),
@@ -33,16 +36,7 @@ const config = [
                         return pathname.indexOf(u) > -1;
                     });
                 },
-                replace: [
-                    {
-                        from: fromName1,
-                        to: toName1,
-                    },
-                    {
-                        from: fromName2,
-                        to: toName2,
-                    }
-                ]
+                replace: replaces
             }
         ]
     },
