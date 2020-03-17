@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "removeComments": true,
+        "module": "commonjs"
+    },
+    "include": [
+        "/src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "**.d.ts"
+    ],
+    "files": [
+        "src/index.ts"
+    ]
+}

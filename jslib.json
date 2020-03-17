@@ -1,0 +1,11 @@
+{
+    "name": "JsTs-Lib-Starter",
+    "npmname": "jsts-lib-starter",
+    "umdname": "jsts-lib-starter",
+    "username": "ASheng",
+    "type": "ts",
+    "module": "umd,esm,commonjs",
+    "test": "mocha",
+    "lang": "zh",
+    "version": "1.6.0"
+}
