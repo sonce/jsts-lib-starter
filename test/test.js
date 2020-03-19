@@ -8,6 +8,7 @@ describe('单元测试', function() {
 
     describe('功能1', function() {
         it('相等', function() {
+            let dd = document.getElementById('sdf');
             expect(base.name).to.equal('base');
         });
     });

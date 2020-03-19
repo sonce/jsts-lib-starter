@@ -5,7 +5,8 @@
   "functions": 0,
   "branches": 75,
   "require": [
-    "@babel/register"
+    "@babel/register",
+    "jsdom-global/register"
   ],
   "reporter": [
     "lcov",
