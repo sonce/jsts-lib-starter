@@ -8,10 +8,10 @@ var version = pkg.version;
 
 var banner = 
 `/*!
- * ${pkg.name} ${version} (https://github.com/sonce/JSTS-Lib-Starter)
- * API https://github.com/sonce/JSTS-Lib-Starter/blob/master/doc/api.md
+ * ${pkg.name} ${version} (https://github.com/sonce/BTGrid)
+ * API https://github.com/sonce/BTGrid/blob/master/doc/api.md
  * Copyright 2017-${(new Date).getFullYear()} sonce. All Rights Reserved
- * Licensed under MIT (https://github.com/sonce/JSTS-Lib-Starter/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/sonce/BTGrid/blob/master/LICENSE)
  */
 `;
 var type = pkg.srctype === 'ts' ? 'ts' : 'js';

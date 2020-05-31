@@ -5,6 +5,7 @@
     ],
     "require": [
         "ts-node/register",
+        "@babel/register",
         "jsdom-global/register",
         "source-map-support/register"
     ],

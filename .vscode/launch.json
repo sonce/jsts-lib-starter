@@ -13,13 +13,15 @@
                 "jsdom-global",
                 "--require",
                 "source-map-support/register",
+                "--require",
+                "@babel/register",
                 "-u",
                 "bdd",
                 "--timeout",
                 "999999",
                 "--colors",
                 "--recursive",
-                "${workspaceFolder}/test/**/*.ts"
+                "${workspaceFolder}/test/**/*.spec.ts"
             ],
             "internalConsoleOptions": "openOnSessionStart",
             "skipFiles": [

@@ -1,1 +1,3 @@
-export const name = 'base';
+export default function getName(): string {
+    return 'base';
+}
