@@ -1,18 +1,18 @@
 // rollup.config.js
 // umd
-var nodeResolve = require('@rollup/plugin-node-resolve');
-var commonjs = require('@rollup/plugin-commonjs');
-var uglify = require('rollup-plugin-uglify');
+var {nodeResolve} = require("@rollup/plugin-node-resolve");
+var commonjs = require("@rollup/plugin-commonjs");
+var uglify = require("rollup-plugin-uglify");
 
-var common = require('./rollup.js');
+var common = require("./rollup.js");
 
-var prod = process.env.NODE_ENV === 'production';
+var prod = process.env.NODE_ENV === "production";
 
 module.exports = {
-    input: 'src/index.' + common.type,
+    input: "src/index." + common.type,
     output: {
-        file: prod ? 'dist/index.umd.min.js' : 'dist/index.umd.js',
-        format: 'umd',
+        file: prod ? "dist/index.umd.min.js" : "dist/index.umd.js",
+        format: "umd",
         // When export and export default are not used at the same time, set legacy to true.
         // legacy: true,
         name: common.name,
@@ -20,13 +20,13 @@ module.exports = {
     },
     plugins: [
         nodeResolve({
-            mainFields: ['module', 'main'],
-            extensions: [common.type === 'ts' ? '.ts' : '', '.js']
+            mainFields: ["module", "main"],
+            extensions: [common.type === "ts" ? ".ts" : "", ".js"],
         }),
         commonjs({
-            include: 'node_modules/**',
+            include: "node_modules/**",
         }),
         common.getCompiler(),
-        (prod && uglify.uglify())
-    ]
+        prod && uglify.uglify(),
+    ],
 };
