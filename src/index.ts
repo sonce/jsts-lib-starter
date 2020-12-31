@@ -1,9 +1,3 @@
 export const hello = function getName(): string {
-	return 'ddddd';
+	return 'base';
 };
-export class Test {
-	Hello(): void {
-		console.log('sssss');
-		return;
-	}
-}
